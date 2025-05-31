@@ -62,3 +62,24 @@ VALUES (
     NULL, 'taipei'
 ); 
 ```
+
+```sql
+INSERT INTO public.component_maps (
+    id, index, title, type, source, size, icon, paint, property
+) VALUES (
+    300,
+    'car_crash_point',
+    '車禍網圖',
+    'symbol',
+    'geojson',
+    null,
+    null,
+    '{}'::jsonb,
+    '[
+        {"key":"sna", "name":"場站名稱"},
+        {"key":"sno", "name":"場站ID"},
+        {"key":"available_return_bikes", "name":"可還車位"},
+        {"key":"available_rent_general_bikes", "name":"剩餘車輛"}
+    ]'::jsonb
+);
+```
