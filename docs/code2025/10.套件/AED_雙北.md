@@ -109,3 +109,68 @@ $$
 );
 
 ```
+
+map
+```sql
+INSERT INTO public.component_maps (
+	id, index, title, type, source, size, icon, paint, property)
+VALUES (
+	321,
+	'aed_locations',
+	'AED位置',
+	'symbol',
+	'geojson',
+	null,
+	'youbike',
+	'{}'::jsonb,
+	'[
+	  {"key": "場所名稱", "name": "場所名稱"},
+	  {"key": "場所地址", "name": "場所地址"},
+	  {"key": "區域代碼", "name": "區域代碼"},
+	  {"key": "場所分類", "name": "場所分類"},
+	  {"key": "場所類型", "name": "場所類型"},
+	  {"key": "AED放置地點", "name": "AED放置地點"},
+      {"key": "開放使用時間備註", "name": "開放使用時間備註"},
+      {"key": "開放時間緊急連絡電話", "name": "開放時間緊急連絡電話"}
+	]'::jsonb
+);
+```
+
+```sql
+INSERT INTO public.component_maps (
+	id, index, title, type, source, size, icon, paint, property)
+VALUES (
+	322,
+	'aed_locations',
+	'AED位置',
+	'symbol',
+	'geojson',
+	null,
+	'youbike',
+	'{}'::jsonb,
+	'[
+  { "key": "場所ID", "name": "場所ID" },
+  { "key": "場所名稱", "name": "場所名稱" },
+  { "key": "場所縣市", "name": "場所縣市" },
+  { "key": "場所區域", "name": "場所區域" },
+  { "key": "場所地址", "name": "場所地址" },
+  { "key": "場所分類", "name": "場所分類" },
+  { "key": "場所類型", "name": "場所類型" },
+  { "key": "場所描述", "name": "場所描述" },
+  { "key": "AEDID", "name": "AEDID" },
+  { "key": "AED放置地點", "name": "AED放置地點" },
+  { "key": "AED地點描述", "name": "AED地點描述" },
+  { "key": "地點LAT", "name": "地點LAT" },
+  { "key": "地點LNG", "name": "地點LNG" },
+  { "key": "周一至周五起", "name": "周一至周五起" },
+  { "key": "周一至周五迄", "name": "周一至周五迄" },
+  { "key": "周六起", "name": "周六起" },
+  { "key": "周六迄", "name": "周六迄" },
+  { "key": "周日起", "name": "周日起" },
+  { "key": "周日迄", "name": "周日迄" },
+  { "key": "開放使用時間備註", "name": "開放使用時間備註" },
+  { "key": "開放時間緊急連絡電話", "name": "開放時間緊急連絡電話" }
+]
+'::jsonb
+);
+```
