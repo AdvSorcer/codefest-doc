@@ -31,7 +31,7 @@ components
 ```sql
 INSERT INTO public.components(
 	id, index, name)
-	VALUES (320, 'aed_locations', 'AED位置資訊');
+	VALUES (320, 'aed_locations', 'AED雙北位置資訊');
 ```
 
 component_chart
@@ -83,8 +83,8 @@ VALUES (
     '2025-05-30', '2025-05-30', 'two_d',
     $$
     SELECT
-  district,
-  COUNT(*) AS total
+  district as x_axis,
+  COUNT(*) AS data
 FROM
   aed_locations
 GROUP BY
