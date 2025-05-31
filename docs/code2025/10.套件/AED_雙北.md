@@ -55,15 +55,22 @@ VALUES (
     '交通局交工處', '顯示台北AED', NULL, NULL, NULL, NULL,
     '2025-05-30', '2025-05-30', 'two_d',
     $$
-    SELECT
-  district,
-  COUNT(*) AS total
+
+
+
+SELECT
+  district as x_axis,
+  COUNT(*) AS data
 FROM
   aed_locations
+  where city  in ('臺北市')
 GROUP BY
   district
 ORDER BY
-  total DESC;
+  data DESC;
+
+
+
 $$
     ,
     NULL, 'taipei'
@@ -82,15 +89,20 @@ VALUES (
     '交通局交工處', '顯示台北AED', NULL, NULL, NULL, NULL,
     '2025-05-30', '2025-05-30', 'two_d',
     $$
-    SELECT
+
+
+
+SELECT
   district as x_axis,
   COUNT(*) AS data
 FROM
   aed_locations
+  where city  in ('新北市','臺北市')
 GROUP BY
   district
 ORDER BY
-  total DESC;
+  data DESC;
+
 $$
     ,
     NULL, 'metrotaipei'
